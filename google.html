@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>
+         Aashima chopra
+    </title>
+    <link rel="stylesheet" type="text/css" href="resumestyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<style>
+    body {
+    margin: 0px;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+/* Body Header */
+
+#body-header {
+    height: 65vh;
+    opacity: 0.8;
+    background-image: url('https://cnet4.cbsistatic.com/img/ZH5sU6Q3wx2dv7SGOnYYjBU7WBE=/770x433/2017/06/06/349b7e65-a855-44f0-ae0a-6610ebca0809/apple-macbook-pro-12-inch-2017-4181.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 1.2rem;
+}
+
+/* Horizontal Lists */
+
+.horizontal-list {
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.horizontal-list li {
+    display: inline-block;
+    margin: 0px 8px 8px 0px;
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+
+.horizontal-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu li a {
+    transition: color 0.5s, border-bottom 4s;
+}
+
+.nav-menu li a:hover {
+    color: lightgrey;
+    border-bottom: 1px solid black;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Name and Social Icons*/
+
+#name-social-container {
+    margin-top: 20vh;
+}
+
+#my-name {
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+
+.social-icons li a i {
+    /color: red;/
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 50%;
+}
+
+
+.social-icons li a i:hover {
+    box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+section:nth-child(2n) {
+    background-color: #9e9b9b29;
+}
+
+section:nth-child(2n + 1) {
+    background-color: white;
+}
+
+section:target {
+    background-color: cyan;
+}
+
+
+.section-heading {
+    width: auto;
+    padding: 20px 10px 10px;
+    margin: 10px auto;
+    font-weight: 400;
+}
+
+.section-heading span {
+
+    font-size: var(--section-heading-font-size);
+    color: #2857a4;
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: 0.5rem;
+
+}
+
+/About Section/
+
+#about {
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+#my-image {
+    z-index:2;
+    height: 12rem;
+    width: 12rem;
+    margin: auto;
+    margin-top: -17vh;
+}
+
+#my-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 1px 1px 10px 2px lightgrey;
+}
+
+#about-para {
+    padding: 10px;
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    color: grey;
+    line-height: 28px;
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+
+/Skills Section/
+.skills-display {
+    width: 70%;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill-progress {
+    width: 7rem;
+    height: 1.4rem;
+    margin: 20px;
+    background-color: lightgrey;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: inset 1px 1px 2px 1px #b9b9b9;
+}
+
+/*.skill-progress>div{
+    border-radius: 20px 0 0 20px;
+    box-shadow: 1px 1px 5px 2px #98989882
+}*/
+
+.skill-name {
+    font-size: 15px;
+    color: white;
+    padding: 6px 0 10px 20px;
+
+}
+
+.skill-name span {
+    margin: 0;
+}
+
+
+/* Hobby Section */
+
+#portfolio-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 50px;
+    margin-bottom: 2%;
+    justify-content: space-around;
+}
+
+.portfolio-image-container {
+    max-width: 300px;
+    overflow: hidden;
+    margin: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.portfolio-image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-details {
+    /* display: none; */
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: transparent;
+    text-align: center;
+    padding: 10px;
+    /* background-color: white; */
+}
+
+.portfolio-image-container:hover {
+    box-shadow: 0 0 20px #74ADC8;
+}
+
+.portfolio-image-container:hover .portfolio-details {
+    background-color: #80808078;
+    /* display: block; */
+    color: white;
+}
+
+/* Contact Form */
+
+#contact {
+
+
+
+
+</style>
+
+</head>
+<body>
+	   <header id="body-header">
+        <nav>
+            <ul class="horizontal-list text-center nav-menu">
+                <li>
+                    <a href="#"> Home </a>
+                </li>
+                <li>
+                    <a href="#about"> About Me </a>
+                </li>
+                <li>
+                    <a href="#skills"> Skills </a>
+                </li>
+                <li>
+                    <a href="#portfolio">My Hobbies</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="name-social-container">
+            <div class="text-center">
+                <h1 id="my-name">
+                    Aashima Chopra
+                </h1>
+            </div>
+            <div>
+                <ul class="horizontal-list text-center social-icons">
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-stack-overflow"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-stack-overflow"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </header>
+    <main>
+        <section id="about">
+            <div id="my-image">
+                <img src="C:\Users\Acer\Desktop\WhatsApp Image 2021-01-27 at 14.39.27.jpeg">
+            </div>
+            <div id="about-para">
+
+                <p>
+                    Hi , I am Aashima Chopra, a student of NSUT<span class="text-highlight"></span>. I live in Kirti Nagar.I am first year student in Mechanical (Electric Vehicles) branch. <span class="text-highlight"></span> I am a beginner in coding and web development. My hobbies are writing,reading books and playing badminton. <span class="text-highlight"></span>
+                </p>
+            </div>
+
+
+        </section>
+
+
+
+        <section id="skills">
+            <h1 class="section-heading mb75px ">
+                <span>
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </span>
+                <span> SKILLS </span>
+            </h1>
+
+            <div class="skills-display">
+
+                <div class="skill-progress">
+                    <div class="eighty-five-percent mb-blue">
+                        <div class="skill-name">
+                            <span> Java </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-progress">
+                    <div class="eighty-percent mb-orange">
+                        <div class="skill-name">
+                            <span> C++ </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-progress">
+                    <div class="eighty-percent mb-light-purple">
+                        <div class="skill-name">
+                            <span> HTML </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-progress">
+                    <div class="seventy-five-percent mb-teal">
+                        <div class="skill-name">
+                            <span> CSS </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-progress">
+                    <div class="eighty-percent mb-blue">
+                        <div class="skill-name">
+                            <span> C++ </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-progress">
+                    <div class="seventy-five-percent mb-light-purple">
+                        <div class="skill-name">
+                            <span> HTML </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-progress">
+                    <div class="eighty-percent mb-teal">
+                        <div class="skill-name">
+                            <span> CSS </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-progress">
+                    <div class="eighty-percent mb-orange">
+                        <div class="skill-name">
+                            <span> C++ </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="portfolio">
+            <h1 class="section-heading mb75px">
+                <span>
+                    <i class="fas fa-th-list"></i>
+                </span>
+                <span> My Hobbies </span>
+            </h1>
+
+            <div id="portfolio-container">
+
+                <div class="portfolio-image-container">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.FgG00N3lNWNksgrDeV1C7QHaEI&pid=Api&P=0&w=316&h=177">
+                    <div class="portfolio-details">
+                        <p>
+                            I love travelling and its my hobby
+                            
+                        </p>
+                    </div>
+
+                </div>
+                <div class="portfolio-image-container">
+                    <img src="https://www.thephoblographer.com/wp-content/uploads/2016/10/lisa-bettany-photography-business-hero.jpg">
+                    <div class="portfolio-details">
+                        <p>
+                            I love photography its my hobby
+                        </p>
+                    </div>
+
+                </div>
+                <div class="portfolio-image-container">
+                    <img src="https://pixfeeds.com/images/sports/badminton/1280-520704716-badminton-player.jpg">
+                    <div class="portfolio-details">
+                        <p>
+                            I love to play badminton
+                        </p>
+                    </div>
+
+                </div>
+                <div class="portfolio-image-container">
+                    <img src="https://static3.srcdn.com/wordpress/wp-content/uploads/2020/02/Superhero-Movies-Featured.jpg">
+                    <div class="portfolio-details">
+                        <p>
+                            I love to watch movies
+                            
+                        </p>
+                    </div>
+
+                </div>
+                
+                
+
+            </div>
+
+        </section>
+
+        
+
+    </main>
+
+<body>
+</body>
+</html>
